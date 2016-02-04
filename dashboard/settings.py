@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'pipeline',
 
     'dashboard.socialaccount.providers.fxa',
     'landing',
@@ -159,5 +160,25 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
+PIPELINE = {
+    'STYLESHEETS': {
+        'main': {
+            'source_filenames': (
+                'css/main.css',
+
+                'lib/skeleton/css/normalize.css',
+                'lib/skeleton/css/skeleton.css',
+            ),
+            'output_filename': 'css/main.css',
+        },
+    },
+}
 
 SITE_ID = 1
