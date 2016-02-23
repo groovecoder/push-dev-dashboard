@@ -139,8 +139,12 @@ PIPELINE = {
     'STYLESHEETS': {
         'dashboard': {
             'source_filenames': (
-                'css/main.css',
+                'css/layout.css',
+                'css/forms.css',
+
                 'css/home.css',
+
+                'css/vapid-validation.css',
             ),
             'output_filename': 'css/dashboard.css',
         },
