@@ -1,5 +1,4 @@
 {% extends "dashboard/base.html" %}
-{% load socialaccount %}
 {% load waffle_tags %}
 {% load pipeline %}
 
@@ -8,12 +7,7 @@
     <iframe src="https://p.datadoghq.com/sb/NsBIKn-0f8bfd3083" seamless="seamless" scrolling="no"></iframe>
     </div>
     {% if not request.user.is_authenticated %}
-    <div id="sign-in-notice">
-        <div class="alert callout">
-            To sign in to this dashboard you must create and verify a Firefox Account on the <a href="https://stable.dev.lcip.org/" target="_blank">Firefox Accounts stable development server</a>.
-        </div>
-        <a class="large button expand" href="{% provider_login_url "fxa" %}">Sign in with <i class="fa fa-firefox"></i> Firefox Account</a>
-    </div>
+        {% include 'dashboard/includes/authenticate.html' %}
     {% else %}
         {% switch "domains_enabled" %}
         <h3>Domain Authorizations</h3>
