@@ -21,7 +21,8 @@ from .views import Home, VapidValidation
 urlpatterns = [
     # our app urls
     url(r'^$', Home.as_view(), name='home'),
-    url(r'^vapid/validate/', VapidValidation.as_view(), name='vapid_validation'),
+    url(r'^vapid/validate/', VapidValidation.as_view(),
+        name='vapid_validation'),
     url(r'^api/docs/', include('rest_framework_swagger.urls')),
     url(r'^api/v1/', include('api.urls')),
 
