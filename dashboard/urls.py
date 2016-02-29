@@ -16,15 +16,14 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from .views import Home, VapidValidation
+from .views import Home
 
 urlpatterns = [
     # our app urls
     url(r'^$', Home.as_view(), name='home'),
-    url(r'^vapid/validate/', VapidValidation.as_view(),
-        name='vapid_validation'),
     url(r'^api/docs/', include('rest_framework_swagger.urls')),
     url(r'^api/v1/', include('api.urls')),
+    url(r'^push/', include('push.urls')),
 
     # 3rd-party app urls
     url(r'^accounts/', include('allauth.urls')),
