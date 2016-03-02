@@ -15,6 +15,9 @@ import os
 from decouple import config
 import dj_database_url
 
+def path(*parts):
+    return os.path.join(BASE_DIR, *parts)
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -121,7 +124,8 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-        os.path.join(PROJECT_DIR, 'static'),
+    os.path.join(PROJECT_DIR, 'static'),
+    path('push', 'static'),
 )
 
 # Simplified static file serving.
@@ -139,8 +143,12 @@ PIPELINE = {
     'STYLESHEETS': {
         'dashboard': {
             'source_filenames': (
-                'css/main.css',
+                'css/layout.css',
+                'css/forms.css',
+
                 'css/home.css',
+
+                'css/details.css',
             ),
             'output_filename': 'css/dashboard.css',
         },
