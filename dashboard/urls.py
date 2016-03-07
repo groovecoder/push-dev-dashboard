@@ -16,17 +16,18 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from .views import PermissionDenied, Home, Login
+import dashboard.views as dashboard_views
 
-handler403 = PermissionDenied.as_view()
+handler403 = dashboard_views.PermissionDenied.as_view()
+handler404 = dashboard_views.NotFound.as_view()
 
 urlpatterns = [
     # our app urls
-    url(r'^$', Home.as_view(), name='home'),
+    url(r'^$', dashboard_views.Home.as_view(), name='home'),
     url(r'^api/docs/', include('rest_framework_swagger.urls')),
     url(r'^api/v1/', include('api.urls')),
     url(r'^push/', include('push.urls')),
-    url(r'^accounts/login/$', Login.as_view(), name='login'),
+    url(r'^accounts/login/$', dashboard_views.Login.as_view(), name='login'),
 
     # 3rd-party app urls
     url(r'^accounts/', include('allauth.urls')),

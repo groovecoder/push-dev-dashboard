@@ -9,5 +9,9 @@ class Login(TemplateView):
     template_name = 'dashboard/login.html'
 
 
+class NotFound(TemplateView):
+    template_name = 'dashboard/errors/404.html'
+
+
 class PermissionDenied(TemplateView):
     template_name = 'dashboard/errors/403.html'
