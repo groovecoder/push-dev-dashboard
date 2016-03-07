@@ -148,6 +148,9 @@ PIPELINE = {
                 'css/layout.css',
                 'css/forms.css',
 
+                # Homepage
+                'css/home.css',
+
                 # Login page
                 'css/login.css',
 

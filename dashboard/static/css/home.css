@@ -1,0 +1,8 @@
+#datadog {
+    width: 758px;
+    height: 258px;
+    border: 0;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto 20px auto;
+}
