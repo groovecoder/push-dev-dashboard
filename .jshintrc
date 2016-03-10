@@ -1,0 +1,23 @@
+{
+    "browser": true,
+    "jquery": true,
+    "node": true,
+
+    "bitwise": true,
+    "curly": false,
+    "eqeqeq": true,
+    "forin": true,
+    "freeze": true,
+    "indent": 4,
+    "noarg": true,
+    "noempty": true,
+    "nonbsp": true,
+    "quotmark": "single",
+    "strict": true,
+    "undef": true,
+    "unused": "vars",
+
+    "predef": [
+        "dashboard"
+    ]
+}

@@ -106,9 +106,9 @@
 
         trackLink: function(event, url, data) {
             // ctrl or cmd click or context menu
-            var newTab = (event.metaKey || event.ctrlKey || event.type == 'contextmenu');
+            var newTab = (event.metaKey || event.ctrlKey || event.type === 'contextmenu');
             // is a same page anchor
-            var isAnchor = (url.indexOf("#") == 0);
+            var isAnchor = (url.indexOf('#') === 0);
 
             if(newTab || isAnchor) {
                 analytics.trackEvent(data);

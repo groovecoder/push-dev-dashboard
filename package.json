@@ -1,5 +1,10 @@
 {
-    "dependencies": {
-        "yuglify": "^0.1.4"
-    }
+  "dependencies": {
+    "yuglify": "^0.1.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.0",
+    "jshint": "^2.9.1"
+  }
 }
