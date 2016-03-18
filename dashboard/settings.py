@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.untappd',
     'pipeline',
     'rest_framework',
     'rest_framework_swagger',
@@ -187,6 +188,7 @@ PIPELINE = {
                 # Global
                 'js/analytics.js',
                 'js/sign_in.js',
+                'js/konami.js',
 
                 # Push application listing page
                 'js/add-push-application.js',

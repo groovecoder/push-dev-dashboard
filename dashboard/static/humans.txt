@@ -1,2 +1,3 @@
 Contributors
 Developer: github.com/groovecoder
+Developer: github.com/mrmakeit

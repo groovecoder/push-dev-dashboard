@@ -9,10 +9,12 @@ Welcome
 moz-dev-dash is the code for Mozilla Developer Services dashboard. It combines:
 
 * `Firefox Accounts`_ Authentication (via `django-allauth`_)
+* `Untappd`_ Authentication (via `django-allauth`_)
 * (Soon) Domain Verification (via ?)
 * `Mozilla Push Service`_ metrics
 
 .. _Firefox Accounts: https://support.mozilla.org/en-US/kb/access-mozilla-services-firefox-accounts
+.. _Untappd: https://untappd.com/
 .. _django-allauth: https://github.com/pennersr/django-allauth
 .. _Mozilla Push Service: https://autopush.readthedocs.org/en/latest/
 

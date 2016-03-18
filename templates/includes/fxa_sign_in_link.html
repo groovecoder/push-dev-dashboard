@@ -2,6 +2,7 @@
 {% load socialaccount %}
 <div class="sign-in-area">
     <a class="button sign-in-btn" href="{% provider_login_url "fxa" %}?next={{ request.path }}">{% blocktrans %}Sign in with <i class="fa fa-firefox"></i> Firefox Account{% endblocktrans %}</a>
+    <a class="button sign-in-btn control-lock" href="{% provider_login_url "untappd" %}?next={{ request.path }}">{% blocktrans %}Sign in with <i class="fa fa-beer"></i> Untappd{% endblocktrans %}</a>
     {% if 'dev.lcip.org' in settings.SOCIALACCOUNT_PROVIDERS.fxa.OAUTH_ENDPOINT %}
     <div class="callout warning sign-in-tooltip">{% trans "Note: Using dev FxA Environment" %}</div>
     {% endif %}

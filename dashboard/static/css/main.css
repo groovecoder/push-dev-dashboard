@@ -54,3 +54,7 @@ section {
     background-color: #00549E;
     margin: 0;
 }
+
+.control-lock {
+    display:none;
+}
