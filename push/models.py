@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from base64 import urlsafe_b64decode
+from urllib.parse import quote
 import json
 import uuid
 
@@ -201,6 +202,6 @@ class PushApplication(models.Model):
 def delete_key_from_messages_api(sender, instance, **kwargs):
     resp = push_messages_api_request(
         'delete',
-        '/keys/%s' % instance.vapid_key
+        '/keys/%s' % quote(instance.vapid_key, safe='')
     )
     return resp
