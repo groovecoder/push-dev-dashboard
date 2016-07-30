@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from base64 import urlsafe_b64decode
-from urllib.parse import quote
+from urllib import quote
 import json
 import uuid
 
